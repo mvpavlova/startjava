@@ -1,21 +1,21 @@
 public class Variable {
     public static void main(String[] args) {
-        byte one = 2;
-        short two = 4;
-        int integer = 943;
-        long longer = 8328;
-        float real = 23.40f;
-        double doublereal = 10.017763d;
-        char letter = 'c';
-        boolean isbool = true;
+        byte nucleus = 2;
+        short core = 3;
+        int memory = 744;
+        long model = 8328;
+        float versionContr = 23.40f;
+        double version = 10.017763d;
+        char disk = 'c';
+        boolean isOS = true;
 
-        System.out.println(one);
-        System.out.println(two);
-        System.out.println(integer);
-        System.out.println(longer);
-        System.out.println(real);
-        System.out.println(doublereal);
-        System.out.println(letter);
-        System.out.println(isbool);
+        System.out.println(nucleus);
+        System.out.println(core);
+        System.out.println(memory);
+        System.out.println(model);
+        System.out.println(versionContr);
+        System.out.println(version);
+        System.out.println(disk);
+        System.out.println(isOS);
     }
 }

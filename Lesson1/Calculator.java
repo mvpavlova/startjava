@@ -1,4 +1,4 @@
-public class Calculator{
+public class Calculator {
     public static void main(String[] args) {
         int num1 = 10;
         int num2 = 2;
@@ -26,6 +26,5 @@ public class Calculator{
             result = num1 % num2;
             System.out.println(result);
         }
-        
     }
 }

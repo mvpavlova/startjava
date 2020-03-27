@@ -13,7 +13,7 @@ public class Calculator {
         } else if (operator == '/') {
             System.out.println(num1 / num2);
         } else if (operator == '^') {
-             int result = num1;
+            int result = num1;
             for (int i = 1; i < num2; i++) {
                 result = result * num1;
             }

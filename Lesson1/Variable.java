@@ -1,6 +1,6 @@
 public class Variable {
     public static void main(String[] args) {
-        byte nucleus = 2;
+        byte cores = 2;
         short operationMemory = 4;
         int memory = 744;
         long model = 8328;

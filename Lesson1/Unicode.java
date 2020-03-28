@@ -1,11 +1,11 @@
 public class Unicode {
     public static void main(String[] args) {
-        char unicode = '\u0033';
+        char unicode = 33;
         do {
             System.out.println(unicode);
-            if(unicode <= 0126) {
+            if(unicode <= 126) {
                 unicode++;
             }
-        }while (unicode <= 0126);
+        }while (unicode <= 126);
     }
 }

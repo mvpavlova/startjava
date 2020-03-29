@@ -2,8 +2,8 @@ public class Person {
 
     String sex = "female";
     String name = "Maria";
-    double height = 1.72;
-    double weight = 62.5;
+    float height = 1.72f;
+    float weight = 62.5f;
     int age = 24;
 
     void walking() {

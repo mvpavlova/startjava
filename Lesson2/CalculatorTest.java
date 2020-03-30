@@ -3,15 +3,23 @@ import java.util.Scanner; //импорт сканера
 public class CalculatorTest {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Calculator oneCalculator = new Calculator();
+        Calculator calc = new Calculator();
 
         System.out.print("Введите первое число:");
-        oneCalculator.setNum1(scan.nextInt());
+        calc.setNum1(scan.nextInt());
         System.out.print("Введите знак математической операции:");
-        oneCalculator.setOperator(scan.next());
+        calc.setOperator(scan.next());
         System.out.print("Введите второе число:");
-        oneCalculator.setNum2(scan.nextInt());
+        calc.setNum2(scan.nextInt());
 
-        oneCalculator.Operation();
+        calc.calculate();
+
+        System.out.print("Хотите продолжить? [Y/N]");
+        String answer = scan.next();
+        if(answer.equals("Y")) {
+        } else if(answer.equals("N")){
+        } else {
+            System.out.print("Хотите продолжить? [Y/N]");
+        }
     }
 }

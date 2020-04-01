@@ -9,94 +9,65 @@ public class Jaeger {
     private int strenght;
     private int armor;
 
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
+    public Jaeger(String a, String b, String c, float d, float e, int f, int g, int h) {
+        modelName = a;
         if(modelName == "") {
             System.out.println("Пустая строка");
-        } else {
-            this.modelName = modelName;
         }
+        mark = b;
+        origin = c;
+        height = d;
+        if (height <= 0) {
+            System.out.println("height - Неверное значение");
+        }
+        weight = e;
+        if (weight <= 0) {
+            System.out.println("weight - Неверное значение");
+        }
+        speed = f;
+        if (speed < 0) {
+            System.out.println("speed - Неверное значение");
+        }
+        strenght = g;
+        if (strenght <= 0) {
+            System.out.println("strenght - Неверное значение");
+        }
+        armor = h;
+        if (armor <= 0) {
+            System.out.println("armor - Неверное значение");
+        }
+    }
+    public String getModelName() {
+        return modelName;
     }
 
     public String getMark() {
         return mark;
     }
 
-    public void setMark(String mark) {
-        this.mark = mark;
-    }
-
     public String getOrigin() {
         return origin;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin;
     }
 
     public float getHeight() {
         return height;
     }
 
-    public void setHeight(float height) {
-        if (height <= 0) {
-            System.out.println("height - Неверное значение");
-        } else {
-            this.height = height;
-        }
-    }
-
     public float getWeight() {
         return weight;
-    }
-
-    public void setWeight(float weight) {
-        if (weight <= 0) {
-            System.out.println("weight - Неверное значение");
-        } else {
-            this.weight = weight;
-        }
     }
 
     public int getSpeed() {
         return speed;
     }
 
-    public void setSpeed(int speed) {
-        if (speed < 0) {
-            System.out.println("speed - Неверное значение");
-        } else {
-            this.speed = speed;
-        }
-    }
-
     public int getStrenght() {
         return strenght;
-    }
-
-    public void setStrenght(int strenght) {
-        if (strenght <= 0) {
-            System.out.println("strenght - Неверное значение");
-        } else {
-            this.strenght = strenght;
-        }
     }
 
     public int getArmor() {
         return armor;
     }
-
-    public void setArmor(int armor) {
-        if (armor <= 0) {
-            System.out.println("armor - Неверное значение");
-        } else {
-            this.armor = armor;
-        }
-    }
-
 
     public boolean drift() {
         System.out.println("Вы вошли в дрифт");

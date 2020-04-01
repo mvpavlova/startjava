@@ -1,7 +1,6 @@
 public class JaegerTest {
     public static void main(String[] args) {
         Jaeger jagerOne = new Jaeger();
-        Jaeger jagerTwo = new Jaeger();
 
         jagerOne.setModelName("Gipsy Danger");
         System.out.println(jagerOne.getModelName());
@@ -17,6 +16,7 @@ public class JaegerTest {
         System.out.println(jagerOne.getMark() + jagerOne.getOrigin());
         System.out.println(jagerOne.getHeight() + jagerOne.getWeight());
 
+        Jaeger jagerTwo = new Jaeger();
         jagerTwo.setModelName("Cherno Alpha");
         System.out.println(jagerTwo.getModelName());
 

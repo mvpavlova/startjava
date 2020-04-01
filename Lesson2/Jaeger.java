@@ -14,7 +14,7 @@ public class Jaeger {
     }
 
     public void setModelName(String modelName) {
-        if(modelName == ""){
+        if(modelName == "") {
             System.out.println("Пустая строка");
         } else {
             this.modelName = modelName;

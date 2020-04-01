@@ -9,32 +9,17 @@ public class Jaeger {
     private int strenght;
     private int armor;
 
-    public Jaeger(String a, String b, String c, float d, float e, int f, int g, int h) {
-        modelName = a;
+    public Jaeger(String modelName, String mark,int armor) {
         if(modelName == "") {
             System.out.println("Пустая строка");
+        } else {
+            this.modelName = modelName;
         }
-        mark = b;
-        origin = c;
-        height = d;
-        if (height <= 0) {
-            System.out.println("height - Неверное значение");
-        }
-        weight = e;
-        if (weight <= 0) {
-            System.out.println("weight - Неверное значение");
-        }
-        speed = f;
-        if (speed < 0) {
-            System.out.println("speed - Неверное значение");
-        }
-        strenght = g;
-        if (strenght <= 0) {
-            System.out.println("strenght - Неверное значение");
-        }
-        armor = h;
+        this.mark = mark;
         if (armor <= 0) {
             System.out.println("armor - Неверное значение");
+        } else {
+            this.armor = armor;
         }
     }
     public String getModelName() {

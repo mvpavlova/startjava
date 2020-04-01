@@ -14,12 +14,18 @@ public class CalculatorTest {
 
         calc.calculate();
 
-        System.out.print("Хотите продолжить? [Y/N]");
-        String answer = scan.next();
-        if(answer.equals("Y")) {
-        } else if(answer.equals("N")){
-        } else {
-            System.out.print("Хотите продолжить? [Y/N]");
+        Scanner choice = new Scanner(System.in);
+        boolean valid = true;
+        while(valid) {
+            System.out.print("Хотите продолжить? Y/N ");
+            String answer = choice.nextLine();
+            if(answer.equals("Y")) {
+                valid = false;
+            } else if (answer.equals("N")) {
+                valid = false;
+            } else {
+                valid = true;
+            }
         }
     }
 }

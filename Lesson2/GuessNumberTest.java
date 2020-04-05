@@ -2,23 +2,27 @@ import java.util.Scanner; //импорт сканера
 
 public class GuessNumberTest {
     public static void main(String[] args) {
-        Player player1 = new Player();
-        Player player2 = new Player();
-        GuestNumber compNumber = new GuestNumber();
-        GuestNumber userNumber = new GuestNumber(GuessNumberTest.player1,GuessNumberTest.player2);
-
-        userNumber.game();
-
-        Scanner choice = new Scanner(System.in);
-        boolean valid = true;
-        while(valid) {
-            System.out.print("Хотите продолжить? Y/N ");
-            String answer = choice.nextLine();
-            if(answer.equals("Y"&&"N")) {
-                valid = false;
-            } else {
-                valid = true;
-            }
-        }
+        Scanner scanName = new Scanner(System.in);
+        System.out.print("Введите имя игрока: ");
+        Player player1 = new Player(scanName.nextLine());
+        System.out.print("Введите имя игрока: ");
+        Player player2 = new Player(scanName.nextLine());
+        GuessNumber userNumber = new GuessNumber(player1.getName(), player2.getName());
     }
+
+
+        userNumber
+
+    //     Scanner choice = new Scanner(System.in);
+    //     boolean valid = true;
+    //     while(valid) {
+    //         System.out.print("Хотите продолжить? Y/N ");
+    //         String answer = choice.nextLine();
+    //         if(answer == "Y" && answer == "N") {
+    //             valid = false;
+    //         } else {
+    //             valid = true;
+    //         }
+    //     }
+    // }
 }

@@ -10,7 +10,7 @@ public class Player {
         return name;
     }
 
-    public void setNumber (int number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 

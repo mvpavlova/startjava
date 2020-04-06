@@ -12,15 +12,13 @@ public class GuessNumberTest {
         play.gamePlay();
 
         String answer = "";
-        for (int i = 1; i > 0; i++) {
-            switch(answer) {
-                case "Y":
-                    play.gamePlay();
-                case "N":
-                    break;
-                default:
-                System.out.print("Хотите продолжить? Y/N ");
-                answer = scan.nextLine();
+        while(answer != "N") {
+            System.out.print("Хотите продолжить? Y/N ");
+            answer = scan.nextLine();
+            if(answer.equals("Y")) {
+                play.gamePlay();
+            } else if(answer.equals("N")) {
+                break;
             }
         }
     }

@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class GuessNumber {
 
-    Player player1;
-    Player player2;
-    Scanner scanNumber = new Scanner(System.in);
-    Random random = new Random();
-    int compNumber;
+    private Player player1;
+    private Player player2;
+    private Scanner scanNumber = new Scanner(System.in);
+    private Random random = new Random();
+    private int compNumber;
 
     public GuessNumber(Player player1, Player player2) {
          this.player1 = player1;
@@ -15,7 +15,6 @@ public class GuessNumber {
      }
 
     public void gamePlay() {
-
        compNumber = random.nextInt(101);
 
         do {
@@ -38,8 +37,8 @@ public class GuessNumber {
             } else {
                 break;
             }
-        }while(true);
-
+        } while(true);
+        
         System.out.println("Вы Угадали!");
     }
 }

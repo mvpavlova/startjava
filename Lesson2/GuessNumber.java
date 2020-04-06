@@ -14,7 +14,7 @@ public class GuessNumber {
          this.player2 = player2;
      }
 
-    public void play() {
+    public void gamePlay() {
 
        compNumber = random.nextInt(101);
 

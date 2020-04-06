@@ -11,9 +11,9 @@ public class GuessNumberTest {
 
         play.gamePlay();
 
-        System.out.print("Хотите продолжить? Y/N ");
-        String answer = scan.nextLine();
-        switch(answer) {
+        String answer = "";
+        for (int i = 1; i > 0; i++) {
+            switch(answer) {
                 case "Y":
                     play.gamePlay();
                 case "N":
@@ -21,6 +21,7 @@ public class GuessNumberTest {
                 default:
                 System.out.print("Хотите продолжить? Y/N ");
                 answer = scan.nextLine();
+            }
         }
     }
 }

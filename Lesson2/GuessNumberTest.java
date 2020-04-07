@@ -13,11 +13,11 @@ public class GuessNumberTest {
 
         String answer = "Y";
         while(!answer.equals("N")) {
+            if(answer.equals("Y")) {
+                play.gamePlay();
+            }
             System.out.print("Хотите продолжить? Y/N ");
             answer = scan.nextLine();
-            if(answer.equals("Y")) {
-                break;
-            }
         }
     }
 }

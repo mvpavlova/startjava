@@ -9,8 +9,6 @@ public class GuessNumberTest {
         Player player2 = new Player(scan.nextLine());
         GuessNumber play = new GuessNumber(player1, player2);
 
-        play.gamePlay();
-
         String answer = "Y";
         while(!answer.equals("N")) {
             if(answer.equals("Y")) {

@@ -6,7 +6,6 @@ public class CalculatorTest {
     public static void main(String[] args) {
         System.out.print("Введите математическое выражение: ");
         Calculator expr = new Calculator();
-
         expr.calculate();
 
         Scanner choice = new Scanner(System.in);

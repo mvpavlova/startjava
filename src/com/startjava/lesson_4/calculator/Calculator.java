@@ -1,21 +1,14 @@
 package com.startjava.lesson_4.calculator;
 import java.util.Scanner;
-import static java.lang.Integer.parseInt;
+import static java.lang.Integer.*;
 
 public class Calculator {
-    String[] calc = new String[3];
-
-    public Calculator() {
-        Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < 3; i++) {
-            calc[i] = scanner.next();
-        }
-
-
-    }
     public void calculate() {
-        int num1 = Integer.parseInt(calc[0]);
-        int num2 = Integer.parseInt(calc[2]);
+        Scanner scanner = new Scanner(System.in);
+        String expr = scanner.nextLine();
+        String[] calc = expr.split(" ");
+        int num1 = parseInt(calc[0]);
+        int num2 = parseInt(calc[2]);
         switch (calc[1]) {
             case "+": System.out.println(num1 + num2);
                 break;

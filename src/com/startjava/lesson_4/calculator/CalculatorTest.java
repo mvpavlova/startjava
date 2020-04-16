@@ -4,22 +4,19 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        System.out.print("Введите математическое выражение: ");
-        Calculator expr = new Calculator();
-        expr.calculate();
-
         Scanner choice = new Scanner(System.in);
-        boolean valid = true;
-        while(valid) {
-            System.out.print("Хотите продолжить? Y/N ");
-            String answer = choice.nextLine();
-            if(answer.equals("Y")) {
-                valid = false;
-            } else if (answer.equals("N")) {
-                valid = false;
-            } else {
-                valid = true;
-            }
+        String answer = "да";
+        while(answer.equals("да")) {
+            System.out.print("Введите математическое выражение: ");
+            Scanner scanner = new Scanner(System.in);
+            String srcMathExpression = scanner.nextLine();
+            String[] splitMathExpression = srcMathExpression.split(" ");
+            Calculator calc = new Calculator(splitMathExpression);
+            calc.calculate();
+            do {
+                System.out.print("Хотите продолжить? да/нет ");
+                answer = choice.nextLine();
+            }while (!answer.equals("да") && !answer.equals("нет"));
         }
     }
 }

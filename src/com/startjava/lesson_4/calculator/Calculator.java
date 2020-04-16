@@ -3,10 +3,12 @@ import java.util.Scanner;
 import static java.lang.Integer.*;
 
 public class Calculator {
+    private String[] calc;
+    public Calculator(String[] calc) {
+        this.calc = calc;
+    }
+
     public void calculate() {
-        Scanner scanner = new Scanner(System.in);
-        String expr = scanner.nextLine();
-        String[] calc = expr.split(" ");
         int num1 = parseInt(calc[0]);
         int num2 = parseInt(calc[2]);
         switch (calc[1]) {
@@ -26,7 +28,5 @@ public class Calculator {
                 System.out.println(num1 % num2);
                 break;
         }
-
     }
 }
-

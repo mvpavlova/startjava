@@ -1,20 +1,17 @@
 package com.startjava.lesson_4.calculator;
-
-import java.util.Scanner;
 import static java.lang.Integer.*;
 
 public class Calculator {
 
-    private String[] calc;
+    private String[] mathExpression;
     public Calculator(String[] splitMathExpression) {
-        this.calc = splitMathExpression;
+        this.mathExpression = splitMathExpression;
     }
 
     public void calculate() {
-
-        int num1 = parseInt(calc[0]);
-        int num2 = parseInt(calc[2]);
-        switch (calc[1]) {
+        int num1 = parseInt(mathExpression[0]);
+        int num2 = parseInt(mathExpression[2]);
+        switch (mathExpression[1]) {
             case "+":
                 System.out.println(num1 + num2);
                 break;
@@ -46,7 +43,6 @@ public class Calculator {
                 result = (int) Math.hypot(num1, num2);
                 System.out.println(result);
                 break;
-
         }
     }
 }

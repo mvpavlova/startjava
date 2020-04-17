@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         String answer = "да";
         while(answer.equals("да")) {

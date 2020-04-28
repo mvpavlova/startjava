@@ -14,9 +14,7 @@ public class GuessNumberTest {
         while(!answer.equals("N")) {
             if(answer.equals("Y")) {
                 System.out.println("У вас 10 попыток");
-                player1.restartGame();
-                player2.restartGame();
-                play.gamePlay();
+                play.startGame();
             }
             System.out.print("Хотите продолжить? Y/N ");
             answer = scan.nextLine();

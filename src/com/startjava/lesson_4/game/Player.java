@@ -6,26 +6,26 @@ import java.util.Arrays;
 
 public class Player {
 
-    private  String namePlayer;
+    private String name;
     private int number;
-    private int[] numberPlayer = new int[10];
-    private int i = 0;
+    private int[] numbers = new int[10];
+    private int i;
 
-    public Player(String namePlayer) {
-        this.namePlayer = namePlayer;
+    public Player(String name) {
+        this.name = name;
     }
 
     public String getName() {
-        return namePlayer;
+        return name;
     }
 
     public void setNumber(int number) {
         this.number = number;
-        if(!numberPlayer.equals(0)) {
-            numberPlayer[i] = number;
+        if(numbers[i] == 0) {
+            numbers[i] = number;
             i++;
         } else {
-            numberPlayer[i] = number;
+            numbers[i] = number;
         }
     }
 
@@ -33,13 +33,13 @@ public class Player {
         return number;
     }
 
-    public void getNumberPlayer() {
-    int[] numbersCopy = Arrays.copyOf(numberPlayer, i);
-    System.out.println(Arrays.toString(numbersCopy));
+    public int[] getNumbers() {
+        numbers = Arrays.copyOf(numbers, i);
+        return numbers;
     }
 
-    public void restartGame() {
-        Arrays.fill(numberPlayer, 0, i, 0);
+    public void setUP() {
+        Arrays.fill(numbers, 0, i, 0);
         i = 0;
     }
 }

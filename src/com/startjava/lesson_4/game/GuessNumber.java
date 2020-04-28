@@ -53,29 +53,5 @@ public class GuessNumber {
         player1.getNumberPlayer();
         System.out.print(player2.getName() + ": ");
         player2.getNumberPlayer();
-
-
-
-//        do {
-//            System.out.print("Игрок " + player1.getName() + " введите число: ");
-//            player1.setNumber(scanNumber.nextInt());
-//            if(compNumber > player1.getNumber()) {
-//                System.out.println("Введенное вами число меньше того, что загадал компьютер");
-//            } else if(compNumber < player1.getNumber()) {
-//                System.out.println("Введенное вами число больше того, что загадал компьютер");
-//            } else {
-//                break;
-//            }
-//
-//            System.out.print("Игрок " + player2.getName() + " введите число: ");
-//            player2.setNumber(scanNumber.nextInt());
-//            if(compNumber > player2.getNumber()) {
-//                System.out.println("Введенное вами число меньше того, что загадал компьютер");
-//            } else if(compNumber < player2.getNumber()) {
-//                System.out.println("Введенное вами число больше того, что загадал компьютер");
-//            } else {
-//                break;
-//            }
-//        } while(true);
     }
 }

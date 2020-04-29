@@ -7,9 +7,8 @@ import java.util.Arrays;
 public class Player {
 
     private String name;
-    private int number;
     private int[] numbers = new int[10];
-    private int i;
+    private int attempt;
 
     public Player(String name) {
         this.name = name;
@@ -20,26 +19,24 @@ public class Player {
     }
 
     public void setNumber(int number) {
-        this.number = number;
-        if(numbers[i] == 0) {
-            numbers[i] = number;
-            i++;
+        if(numbers[attempt] == 0) {
+            numbers[attempt] = number;
         } else {
-            numbers[i] = number;
+            attempt++;
+            numbers[attempt] = number;
         }
     }
 
     public int getNumber() {
-        return number;
+        return numbers[attempt];
     }
 
     public int[] getNumbers() {
-        numbers = Arrays.copyOf(numbers, i);
-        return numbers;
+        return Arrays.copyOf(numbers, attempt);
     }
 
-    public void setUP() {
-        Arrays.fill(numbers, 0, i, 0);
-        i = 0;
+    public void setUp() {
+        Arrays.fill(numbers, 0, attempt, 0);
+        attempt = 0;
     }
 }

@@ -11,7 +11,7 @@ public class GuessNumber {
     private Scanner scanNumber = new Scanner(System.in);
     private Random random = new Random();
     private int compNumber;
-    private Player player;
+    //private Player player;
 
     public GuessNumber(Player player1, Player player2) {
          this.player1 = player1;
@@ -19,40 +19,41 @@ public class GuessNumber {
      }
 
     public void startGame() {
-        restart();
+        setDefaultValues();
         compNumber = random.nextInt(101);
         int i = 0;
         do {
             if (i < 10) {
-                player = player1;
-                enterNumber();
-                controlNumber();
-                if (player.getNumber() == compNumber) {
+                enterNumber(player1);
+                compare(player1);
+                if (player1.getNumber() == compNumber) {
+                    System.out.println("Игрок " + player1.getName() + " угадал число " + compNumber + " с " + i + " попытки");
                     break;
                 }
-            player = player2;
-            enterNumber();
-            controlNumber();
-            i++;
+                enterNumber(player2);
+                compare(player2);
+                i++;
+                if (player2.getNumber() == compNumber) {
+                    System.out.println("Игрок " + player2.getName() + " угадал число " + compNumber + " с " + i + " попытки");
+                    break;
+                }
+            } else {
+                System.out.println("У " + player1.getName() + " закончились попытки");
+                break;
             }
-        } while(player.getNumber() != compNumber);
+        } while((player1.getNumber() != compNumber) && (player2.getNumber() != compNumber));
 
-        if(i == 10) {
-            System.out.println("У " + player + " закончились попытки");
-        } else {
-            System.out.println("Игрок " + player.getName() + " угадал число " + compNumber + " с " + i + " попытки");
-        }
 
         System.out.print(player1.getName() + ": " + Arrays.toString(player1.getNumbers()));
         System.out.print(player2.getName() + ": " + Arrays.toString(player2.getNumbers()));
     }
 
-    private void enterNumber() {
+    private void enterNumber(Player player) {
         System.out.print("Игрок " + player.getName() + " введите число: ");
         player.setNumber(scanNumber.nextInt());
     }
 
-    private void controlNumber() {
+    private void compare(Player player) {
         if (compNumber > player.getNumber()) {
             System.out.println("Введенное вами число меньше того, что загадал компьютер");
         } else if (compNumber < player.getNumber()) {
@@ -60,8 +61,8 @@ public class GuessNumber {
         }
     }
 
-    private void restart() {
-        player1.setUP();
-        player2.setUP();
+    private void setDefaultValues() {
+        player1.setUp();
+        player2.setUp();
     }
 }

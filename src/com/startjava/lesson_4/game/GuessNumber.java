@@ -44,8 +44,8 @@ public class GuessNumber {
         } while((player1.getNumber() != compNumber) && (player2.getNumber() != compNumber));
 
 
-        System.out.print(player1.getName() + ": " + Arrays.toString(player1.getNumbers()));
-        System.out.print(player2.getName() + ": " + Arrays.toString(player2.getNumbers()));
+        System.out.println(player1.getName() + ": " + Arrays.toString(player1.getNumbers()));
+        System.out.println(player2.getName() + ": " + Arrays.toString(player2.getNumbers()));
     }
 
     private void enterNumber(Player player) {

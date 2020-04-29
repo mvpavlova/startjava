@@ -8,7 +8,7 @@ public class Player {
 
     private String name;
     private int[] numbers = new int[10];
-    private int attempt;
+    private int attempt = 0;
 
     public Player(String name) {
         this.name = name;
@@ -32,7 +32,7 @@ public class Player {
     }
 
     public int[] getNumbers() {
-        return Arrays.copyOf(numbers, attempt);
+        return Arrays.copyOf(numbers, attempt + 1);
     }
 
     public void setUp() {

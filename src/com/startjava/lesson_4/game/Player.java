@@ -19,12 +19,8 @@ public class Player {
     }
 
     public void setNumber(int number) {
-        if(numbers[attempt] == 0) {
-            numbers[attempt] = number;
-        } else {
-            attempt++;
-            numbers[attempt] = number;
-        }
+        attempt++;
+        numbers[attempt] = number;
     }
 
     public int getNumber() {
@@ -32,7 +28,7 @@ public class Player {
     }
 
     public int[] getNumbers() {
-        return Arrays.copyOf(numbers, attempt + 1);
+        return Arrays.copyOf(numbers, attempt);
     }
 
     public void setUp() {

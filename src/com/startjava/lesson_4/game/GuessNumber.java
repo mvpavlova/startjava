@@ -12,7 +12,6 @@ public class GuessNumber {
     private Random random = new Random();
     private int compNumber;
     private int i = 0;
-    private boolean result;
 
     public GuessNumber(Player player1, Player player2) {
          this.player1 = player1;
@@ -23,19 +22,15 @@ public class GuessNumber {
         setDefaultValues();
         compNumber = random.nextInt(101);
         do {
-            if(!result) {
-                enterNumber(player1);
-                compare(player1);
-            } else {
+            enterNumber(player1);
+            if(compare(player1)) {
                 break;
             }
-
-            if(!result) {
-                enterNumber(player2);
-                compare(player2);
-                i++;
-            } else {
+            enterNumber(player2);
+            if(compare(player2)) {
                 break;
+            } else {
+                i++;
             }
         } while(i < 10);
 
@@ -48,17 +43,18 @@ public class GuessNumber {
         player.setNumber(scanNumber.nextInt());
     }
 
-    private void compare(Player player) {
+    private boolean compare(Player player) {
         if (compNumber > player.getNumber()) {
             System.out.println("Введенное вами число меньше того, что загадал компьютер");
         } else if (compNumber < player.getNumber()) {
             System.out.println("Введенное вами число больше того, что загадал компьютер");
         } else if (player.getNumber() == compNumber) {
-            result = true;
             System.out.println("Игрок " + player.getName() + " угадал число " + compNumber + " с " + i + " попытки");
-        } else if(i == 10){
+            return true;
+        } else if (i == 10) {
             System.out.println("У игрока " + player.getName() + " закончились попытки.");
         }
+        return false;
     }
 
     private void setDefaultValues() {

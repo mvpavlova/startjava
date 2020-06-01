@@ -6,5 +6,5 @@ SELECT * FROM jaegers WHERE launch = (SELECT MIN(launch) FROM jaegers);
 SELECT modelName, kaijuKill FROM jaegers WHERE kaijuKill = (SELECT MAX(kaijuKill) FROM jaegers);
 SELECT modelName, kaijuKill FROM jaegers WHERE kaijuKill = (SELECT MIN(kaijuKill) FROM jaegers);
 SELECT AVG(weight) FROM jaegers;
-UPDATE jaegers SET kaijuKill = kaijuKill-2 WHERE status = 'Valid';
+UPDATE jaegers SET kaijuKill = kaijuKill+1 WHERE status = 'Valid';
 DELETE FROM jaegers WHERE status = 'Valid';
